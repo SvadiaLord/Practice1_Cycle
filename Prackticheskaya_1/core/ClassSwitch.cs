@@ -43,6 +43,22 @@ namespace Prackticheskaya_1.core
                 case 10:
                     commandsTasks.Task10();
                     break;
+                case 11:
+                    commandsTasks.Task11();
+                    break;
+                case 12:
+                    commandsTasks.Task12();
+                    break;
+                case 13:
+                    commandsTasks.Task13();
+                    break;
+                case 14:
+                    commandsTasks.Task14();
+                    break;
+                case 15:
+                    commandsTasks.Task15();
+                    break;
+
                 default:
                     Console.WriteLine("Напиши номер правильно обмудень.");
                     break;

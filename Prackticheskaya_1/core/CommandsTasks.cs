@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -145,10 +146,86 @@ namespace Prackticheskaya_1.core
                 }
                 index++;
             }
-            Console.WriteLine(result);*/
+            Console.WriteLine(result);
+            */
             V = V.Replace(" ", "_");
             Console.WriteLine(V);
 
+        }
+        public void Task11()
+        {
+            Console.Write("Введите строку: ");
+            string a = Console.ReadLine();
+            string reversed = "";
+            for (int i = a.Length - 1; i >= 0; i--)
+            {
+                reversed += a[i];
+            }
+            Console.WriteLine("Строка в обратном порядке: " + reversed);
+        }
+        public void Task12()
+        {
+            Console.Write("Введите максимальное значение: ");
+            int max = int.Parse(Console.ReadLine());
+            int a = 0;
+            int b = 1;
+
+            Console.WriteLine("Числа Фибоначчи:");
+
+            while (a <= max)
+            {
+                Console.WriteLine(a);
+                int c = a;
+                a = b;
+                b = c + b;
+
+            }
+        }
+        public void Task13()
+        {
+            Random random = new Random();
+            int number = random.Next(1, 101);
+            int guess = 0;
+
+            Console.WriteLine("Угадайте число от 1 до 100:");
+
+            while (guess != number)
+            {
+                guess = int.Parse(Console.ReadLine());
+
+                if (guess < number)
+                {
+                    Console.WriteLine("Слишком мало, попробуйте снова.");
+                }
+                else if (guess > number)
+                {
+                    Console.WriteLine("Слишком много, попробуйте снова.");
+                }
+                else
+                {
+                    Console.WriteLine("Поздравляю, вы угадали!");
+                }
+            }
+        }
+        public void Task14()
+        {
+            Console.WriteLine("Числа, кратные 3 и 5 в диапазоне от 1 до 100: ");
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 3 == 0 && i % 5 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+        public void Task15()
+        {
+            int count = 0;
+            while (count < 10)
+            {
+                Console.WriteLine("Иди нахуй");
+                count++;
+            }
         }
     }
 }
